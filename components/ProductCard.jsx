@@ -16,7 +16,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AddShoppingCartRoundedIcon from "@mui/icons-material/AddShoppingCartRounded";
-import { Button } from "@mui/material";
+import { Button, Rating, Stack } from "@mui/material";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -42,9 +42,25 @@ export default function ProductCard() {
         <CardMedia
           component="img"
           height="194"
-          image="/mp-lokwan.svg"
+          image="/mp-lokwan.jpg"
           alt="MP Lokwan"
         />
+        <CardContent className="pb-0">
+          <Typography variant="h5">Wheat Atta</Typography>
+          <Typography gutterBottom variant="body1">
+            MP Lokwan
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Truly fresh milled whole grain atta - sourced from the farms of
+            Sehore in Madhya Pradesh
+          </Typography>
+          <Rating
+            name="half-rating"
+            defaultValue={4.74}
+            precision={0.5}
+            className="mt-4"
+          />
+        </CardContent>
         <CardActions disableSpacing className="justify-between">
           <div>
             <IconButton aria-label="add to favorites">
