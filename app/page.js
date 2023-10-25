@@ -1,9 +1,10 @@
-import ProductCard from "@components/ProductCard";
+import ProductListing from "@components/ProductListing";
+import { products } from "@constants/Products";
 
 export default function Home() {
   return (
     <>
-      <ProductCard />
+      <ProductListing products={products} />
     </>
   );
 }

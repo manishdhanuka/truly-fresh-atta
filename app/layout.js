@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { announcements } from "@constants/AnnouncementBar";
+import { announcements } from "@constants/Announcements";
 import AnnouncementBar from "@components/AnnouncementBar";
 import "./globals.css";
 import Header from "@components/Header";
