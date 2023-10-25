@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { Card, CardMedia, IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images, autoSlideInterval = 5000 }) => {
   const classes = useStyles();
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -49,6 +50,17 @@ const ImageSlider = ({ images }) => {
       prevImage === images.length - 1 ? 0 : prevImage + 1
     );
   };
+
+  // Automatically switch to the next image at the specified interval
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextImage();
+    }, autoSlideInterval);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentImage, autoSlideInterval]);
 
   return (
     <div className={classes.imageSlider}>
