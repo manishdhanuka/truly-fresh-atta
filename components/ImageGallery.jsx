@@ -51,7 +51,7 @@ const ImageSlider = ({ images, autoSlideInterval = 5000 }) => {
     );
   };
 
-  // Automatically switch to the next image at the specified interval
+  // Automatically switch to the next image at the specified interval.
   useEffect(() => {
     const intervalId = setInterval(() => {
       nextImage();
