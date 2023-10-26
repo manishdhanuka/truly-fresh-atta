@@ -7,7 +7,7 @@ export const products = [
     images: [
       "./WheatFlour1.svg",
       "./WheatFlour2.svg",
-      "./chapati1.svg",
+      "./Chapati1.svg",
       "./WheatFlour3.svg",
       "./WheatFlour4.svg",
     ],
@@ -21,7 +21,7 @@ export const products = [
     images: [
       "./WheatFlour5.svg",
       "./WheatFlour6.svg",
-      "./chapati1.svg",
+      "./Chapati1.svg",
       "./WheatFlour7.svg",
       "./WheatFlour8.svg",
     ],
@@ -35,7 +35,7 @@ export const products = [
     images: [
       "./WheatFlour9.svg",
       "./WheatFlour10.svg",
-      "./chapati2.svg",
+      "./Chapati1.svg",
       "./WheatFlour11.svg",
       "./WheatFlour12.svg",
     ],
