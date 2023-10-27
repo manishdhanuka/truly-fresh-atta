@@ -23,7 +23,7 @@ const AnnouncementBar = ({ announcements }) => {
       {announcements.length > 0 && (
         <div className="announcement">
           {announcements[currentAnnouncementIndex].map((announcement) => (
-            <span>{announcement}</span>
+            <span key={announcement}>{announcement}</span>
           ))}
         </div>
       )}
