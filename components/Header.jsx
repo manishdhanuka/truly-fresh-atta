@@ -21,7 +21,7 @@ const Header = () => {
 
   const handleProfileToggle = () => {
     setToggleDropdown((prev) => !prev);
-    setTimeout(() => setToggleDropdown((prev) => !prev), 1000);
+    setTimeout(() => setToggleDropdown((prev) => !prev), 2000);
   };
 
   return (
