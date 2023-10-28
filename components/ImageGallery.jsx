@@ -52,15 +52,15 @@ const ImageSlider = ({ images, autoSlideInterval = 5000 }) => {
   };
 
   // Automatically switch to the next image at the specified interval
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      nextImage();
-    }, autoSlideInterval);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     nextImage();
+  //   }, autoSlideInterval);
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [currentImage, autoSlideInterval]);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, [currentImage, autoSlideInterval]);
 
   return (
     <div className={classes.imageSlider}>
