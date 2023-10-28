@@ -80,7 +80,7 @@ const Header = () => {
               onClick={() => setToggleDropdown((prev) => !prev)}
             />
             {toggleDropdown && (
-              <div className="dropdown">
+              <div className="dropdown z-10">
                 <Link
                   href="/profile"
                   className="dropdown_link"
