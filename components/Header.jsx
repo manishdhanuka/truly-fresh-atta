@@ -19,6 +19,11 @@ const Header = () => {
     setUpProviders();
   }, []);
 
+  const handleProfileToggle = () => {
+    setToggleDropdown((prev) => !prev);
+    setTimeout(() => setToggleDropdown((prev) => !prev), 1000);
+  };
+
   return (
     <nav className="flex-between w-full p-2 shadow-lg shadow-slate-100">
       <Link href="/" className="flex gap-2 flex-center">
@@ -34,8 +39,8 @@ const Header = () => {
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
-            <Link href="/create-prompt" className="black_btn">
-              Create Post
+            <Link href="/orders" className="black_btn">
+              My Orders
             </Link>
             <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
@@ -77,7 +82,7 @@ const Header = () => {
               height={37}
               className="rounded-full"
               alt="profile"
-              onClick={() => setToggleDropdown((prev) => !prev)}
+              onClick={handleProfileToggle}
             />
             {toggleDropdown && (
               <div className="dropdown z-10">
@@ -89,11 +94,11 @@ const Header = () => {
                   My Profile
                 </Link>
                 <Link
-                  href="/create-prompt"
+                  href="/orders"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Prompt
+                  My Orders
                 </Link>
                 <button
                   type="button"

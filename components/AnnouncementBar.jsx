@@ -14,7 +14,7 @@ const AnnouncementBar = ({ announcements }) => {
 
   // Set up a timer to cycle through announcements at a certain interval
   useEffect(() => {
-    const interval = setInterval(cycleAnnouncements, 3000); // Change the duration as needed
+    const interval = setInterval(cycleAnnouncements, 5000); // Change the duration as needed
     return () => clearInterval(interval);
   }, [announcements]);
 
