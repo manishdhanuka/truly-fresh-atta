@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
 import { announcements } from "@constants/Announcements";
 import AnnouncementBar from "@components/AnnouncementBar";
-import "./globals.css";
 import Header from "@components/Header";
+import Provider from "@components/Provider";
+import "./globals.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -22,9 +23,11 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <body className={inter.className}>
-        <AnnouncementBar announcements={announcements} />
-        <Header />
-        {children}
+        <Provider>
+          <AnnouncementBar announcements={announcements} />
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );
