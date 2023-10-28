@@ -10,6 +10,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import AddShoppingCartRoundedIcon from "@mui/icons-material/AddShoppingCartRounded";
 import Rating from "@mui/material/Rating";
 import ImageSlider from "./ImageGallery";
+import Link from "next/link";
 
 export default function ProductCard({ product }) {
   return (
@@ -23,12 +24,15 @@ export default function ProductCard({ product }) {
         <Typography variant="body2" color="text.secondary">
           {product.desc}
         </Typography>
-        <Rating
-          name="product-rating"
-          defaultValue={product.rating}
-          precision={0.5}
-          className="mt-4"
-        />
+        <Link href="/ratings">
+          <Rating
+            name="product-rating"
+            defaultValue={product.rating}
+            precision={0.5}
+            readOnly
+            className="mt-4"
+          />
+        </Link>
       </CardContent>
       <CardActions disableSpacing className="justify-between">
         <div>
