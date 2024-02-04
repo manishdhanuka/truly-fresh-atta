@@ -24,15 +24,13 @@ export default function ProductCard({ product }) {
         <Typography variant="body2" color="text.secondary">
           {product.desc}
         </Typography>
-        <Link href="/ratings">
-          <Rating
-            name="product-rating"
-            defaultValue={product.rating}
-            precision={0.5}
-            readOnly
-            className="mt-4"
-          />
-        </Link>
+        <Rating
+          name="product-rating"
+          defaultValue={product.rating}
+          precision={0.5}
+          readOnly
+          className="mt-4"
+        />
       </CardContent>
       <CardActions disableSpacing className="justify-between">
         <div>
